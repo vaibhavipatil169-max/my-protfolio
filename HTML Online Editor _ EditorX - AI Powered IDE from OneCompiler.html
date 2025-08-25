@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vaibhavi Patil | Portfolio</title>
   <!--
-    This is a single-file, beginner‑friendly portfolio.
-    You can paste it into any online editor (e.g., OneCompiler) or save as index.html.
-    All styles are inside this file. Tweak the text below to update your info.
+    Single-file, beginner-friendly portfolio.
+    Paste into any online editor (OneCompiler) or save as index.html.
+    All styles are inside this file. Edit the text below to update your info.
   -->
   <style>
     :root{
@@ -29,7 +29,7 @@
     img{max-width:100%; display:block}
 
     .container{max-width:1100px; margin:0 auto; padding:20px}
-    header{display:flex; gap:20px; align-items:center; padding:24px 0}
+    header{display:flex; gap:20px; align-items:center; padding:24px 0; flex-wrap:wrap}
     .avatar{width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#6aa9ff,#b388ff); display:grid; place-items:center; color:#0b1020; font-weight:700; font-size:28px}
     .title h1{margin:0; font-size:clamp(1.6rem,2.5vw,2.2rem)}
     .title p{margin:.25rem 0 0; color:var(--muted)}
@@ -56,6 +56,10 @@
     .lang{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px}
     .pill{background:var(--chip); border:1px solid #20274a; padding:12px; border-radius:12px; display:flex; align-items:center; justify-content:space-between}
 
+    .list{display:grid; gap:12px}
+    .row{display:flex; gap:12px; flex-wrap:wrap}
+    .row .chip{margin:0}
+
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:12px}
     .btn{display:inline-block; background:var(--accent); color:#0b1020; padding:12px 16px; border-radius:12px; font-weight:700; border:1px solid #7bb6ff}
     .btn.ghost{background:transparent; color:var(--text); border-color:#2f3a68}
@@ -68,21 +72,23 @@
   <div class="container">
     <!-- HEADER / HERO -->
     <header>
-      <!-- If you don't have a photo yet, the initials bubble works fine. Replace with <img src="your-photo.jpg" alt="Vaibhavi Patil" class="avatar" /> -->
+      <!-- Replace with your photo if available -->
       <div class="avatar" aria-hidden="true">VP</div>
       <div class="title">
         <h1>Vaibhavi Patil</h1>
-        <p class="muted">Trainee Engineer • EV Batteries • Power Electronics</p>
+        <p class="muted">Trainee Engineer • Python & Web Developer • Data Analytics</p>
         <div class="cta">
           <a class="btn" href="mailto:vaibhavipatil169@gmail.com">Email Me</a>
+          <a class="btn ghost" href="tel:+919284374856" rel="nofollow">Call</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/vaibhavi-patil-6096a6248" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://www.github.com/" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
-      <nav>
+      <nav aria-label="Primary">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#awards">Awards</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
       </nav>
     </header>
@@ -92,99 +98,177 @@
       <section class="card" id="about" aria-labelledby="about-title">
         <h2 id="about-title">About</h2>
         <p>
-          Trainee Engineer focused on lithium‑ion EV battery manufacturing, with hands‑on experience in insulation
-          resistance (IR) and open‑circuit voltage (OCV) testing. Comfortable collaborating with robotics & automation
-          teams to scale production in fast‑moving startup environments. Passionate about practical problem‑solving for
-          sustainable energy.
-          Motivated IT professional with skills in programming, data analytics, and web development.
-          Skilled in Python, MySQL, Power BI, Excel, MATLAB, Generative AI, HTML, CSS, and JavaScript.
-          Strong problem-solving ability with exposure to real-world projects in automation, analytics,
-          and web solutions. Seeking an opportunity as a Trainee Engineer or Web Developer.
+          I aim to build a career in software and engineering where I can blend programming, web development,
+          and data analytics with hands-on experience in automation, robotics, and battery systems to create
+          scalable, real-world solutions. Comfortable working across Python, front-end web, dashboards, and
+          shop-floor testing/automation (IR, OCV, insulation). Quick learner, collaborative, and motivated to
+          contribute in high-growth teams. <!-- From resume objective -->
         </p>
       </section>
 
       <!-- RIGHT COLUMN -->
-      <aside class="card">
-        <h2>Contact</h2>
+      <aside class="card" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
         <p><b>Email:</b> <a href="mailto:vaibhavipatil169@gmail.com">vaibhavipatil169@gmail.com</a></p>
+        <p><b>Phone:</b> <a href="tel:+919284374856">+91 92843 74856</a></p>
         <p><b>Location:</b> India</p>
         <p><b>Citizenship:</b> India</p>
         <p><b>Pronouns:</b> She/Her</p>
         <div class="sep"></div>
         <h2>Languages</h2>
-        <div class="lang">
-          <div class="pill"><span>English</span><small>Native</small></div>
-          <div class="pill"><span>Marathi</span><small>Native</small></div>
-          <div class="pill"><span>Hindi</span><small>Native</small></div>
+        <div class="lang" aria-label="Languages Known">
+          <div class="pill"><span>English</span><small>Fluent</small></div>
+          <div class="pill"><span>Marathi</span><small>Fluent</small></div>
+          <div class="pill"><span>Hindi</span><small>Fluent</small></div>
         </div>
       </aside>
 
       <!-- EXPERIENCE -->
-      <section class="card" id="experience">
-        <h2>Experience</h2>
+      <section class="card" id="experience" aria-labelledby="exp-title">
+        <h2 id="exp-title">Experience</h2>
         <div class="timeline">
           <div class="item">
-            <b>Trainee Engineer — Geon</b>
-            <small>Apr 2025 – Present • India</small>
+            <b>Python Developer Intern — CodeAlpha</b>
+            <small>Internship • India</small>
             <ul class="muted">
-              <li>Managed lithium‑ion EV battery production for quality & throughput.</li>
-              <li>Performed insulation resistance and OCV testing to maintain standards.</li>
-              <li>Collaborated with robotics/automation to enhance line capability.</li>
-              <li>Contributed within a high‑growth startup focused on energy solutions.</li>
+              <li>Built Python scripts for automation & data handling; followed clean-code practices.</li>
+              <li>Implemented small features and collaborated on real-world tasks.</li>
+              <li>Gained practical exposure to software development workflows.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <b>Trainee Engineer — Geon (EV Batteries)</b>
+            <small>Present • India</small>
+            <ul class="muted">
+              <li>Conducted Internal Resistance (IR), Open Circuit Voltage (OCV), and insulation testing.</li>
+              <li>Assisted in battery pack assembly and validation; upheld safety & quality.</li>
+              <li>Worked with KUKA robots for automation & handling tasks; contributed to software-driven improvements.</li>
             </ul>
           </div>
         </div>
       </section>
 
       <!-- SKILLS -->
-      <section class="card" id="skills">
-        <h2>Skills</h2>
-        <div class="chips" aria-label="skills">
-          <span class="chip">Battery • EV</span>
-          <span class="chip">Power Electronics</span>
-          <span class="chip">Generative AI</span>
-          <span class="chip">Python</span>
-          <span class="chip">MySQL</span>
-          <span class="chip">Power BI</span>
-          <span class="chip">Advanced Excel</span>
-          <span class="chip">MATLAB / Simulink</span>
-          <span class="chip">Web development</span>
+      <section class="card" id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <div class="list">
+          <div>
+            <b>Programming</b>
+            <div class="row">
+              <span class="chip">Python</span>
+              <span class="chip">C</span>
+              <span class="chip">MATLAB</span>
+            </div>
+          </div>
+          <div>
+            <b>Web</b>
+            <div class="row">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </div>
+          <div>
+            <b>Data & Databases</b>
+            <div class="row">
+              <span class="chip">MySQL</span>
+              <span class="chip">Power BI</span>
+              <span class="chip">Advanced Excel</span>
+            </div>
+          </div>
+          <div>
+            <b>Tools</b>
+            <div class="row">
+              <span class="chip">GitHub</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Jupyter Notebook</span>
+              <span class="chip">MS Office</span>
+            </div>
+          </div>
+          <div>
+            <b>Emerging Tech</b>
+            <div class="row">
+              <span class="chip">Generative AI</span>
+              <span class="chip">Automation</span>
+              <span class="chip">Robotics (KUKA)</span>
+            </div>
+          </div>
+          <div>
+            <b>Core Engineering</b>
+            <div class="row">
+              <span class="chip">IR Testing</span>
+              <span class="chip">OCV Testing</span>
+              <span class="chip">Insulation Testing</span>
+              <span class="chip">Pack Assembly</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- AWARDS / PROJECTS -->
-      <section class="card" id="awards">
-        <h2>Awards & Projects</h2>
-        <div class="item">
-          <b>Accenture Innovation Challenge — Participant</b>
-          <small class="muted">Recognition</small>
-        </div>
-        <div class="item" style="margin-top:12px">
-          <b>Wind Tree Turbine — Innovation Project</b>
-          <p class="muted" style="margin:.35rem 0 0">
-            Designed a tree‑shaped wind system with 32 micro H‑rotors to harvest low‑speed urban winds. Modeled in
-            MATLAB/Simulink and CAD; integrated power electronics for clean, distributed generation.
-          </p>
+      <!-- PROJECTS -->
+      <section class="card" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div class="timeline">
+          <div class="item">
+            <b>Portfolio Website</b>
+            <small class="muted">HTML, CSS, JavaScript • 2025</small>
+            <p class="muted">Built and deployed a responsive personal site to showcase experience and work.</p>
+          </div>
+          <div class="item">
+            <b>Data Analytics Dashboard</b>
+            <small class="muted">Power BI, Excel • 2025</small>
+            <p class="muted">Interactive dashboard for trends and KPIs; improved data-driven decisions.</p>
+          </div>
+          <div class="item">
+            <b>Python Mini-Projects</b>
+            <small class="muted">Python • 2025</small>
+            <p class="muted">Automation & small GUI utilities for daily tasks and learning.</p>
+          </div>
+          <div class="item">
+            <b>Traffic Light Controller</b>
+            <small class="muted">Arduino, Sensors • 2024</small>
+            <p class="muted">Working model demonstrating state logic and timing control.</p>
+          </div>
+          <div class="item">
+            <b>Automated Toll Gate System</b>
+            <small class="muted">Arduino, IR Sensors • 2023</small>
+            <p class="muted">Functional prototype for barrier control using IR sensing.</p>
+          </div>
+          <div class="item">
+            <b>Wind Tree Turbine (Concept)</b>
+            <small class="muted">MATLAB, CAD • 2023</small>
+            <p class="muted">Concept design with 32 micro H-rotors to harvest low-speed urban winds.</p>
+          </div>
         </div>
       </section>
 
       <!-- EDUCATION -->
-      <section class="card" id="education">
-        <h2>Education</h2>
-        <div class="item">
-          <b>B.Tech — Electronics</b>
-          <small>M. S. Bidve Engineering College, Latur • Jun 2022 – Present</small>
+      <section class="card" id="education" aria-labelledby="edu-title">
+        <h2 id="edu-title">Education</h2>
+        <div class="timeline">
+          <div class="item">
+            <b>B.Tech (Electronics Engineering)</b>
+            <small>M. S. Bidve Engineering College, Latur • 2022–2026 • 75%</small>
+          </div>
+          <div class="item">
+            <b>HSC</b>
+            <small>Shri Tripura Jr. College, Latur • 2020–2022 • 80%</small>
+          </div>
+          <div class="item">
+            <b>SSC</b>
+            <small>Bhairav Vidyaniketan, Aasgaon • 2020 • 96%</small>
+          </div>
         </div>
       </section>
 
-      <!-- QUICK DOWNLOAD / LINKS -->
-      <aside class="card">
-        <h2>Links</h2>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/vaibhavi-patil-6096a6248" target="_blank" rel="noopener">/vaibhavi‑patil</a></p>
-        <p>Resume: <a href= "https://drive.google.com/file/d/1h_OGl69qRfrAPLOENCGaVV59NLsBUq0Z/view?usp=sharing"target="_blank" rel="noopener">/Resume</a></p>
+      <!-- QUICK LINKS -->
+      <aside class="card" aria-labelledby="links-title">
+        <h2 id="links-title">Links</h2>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/vaibhavi-patil-6096a6248" target="_blank" rel="noopener">/vaibhavi-patil</a></p>
+        <p>Resume: <a href="https://www.dropbox.com/scl/fi/rpkn1i5e1g68hsgqnpyvt/Vaibhavi_Patil_IT_WebDev_Styled_Resume.pdf?rlkey=nk0hvxs2eas7tmouhc4hu0wwv&st=yyhwyyws&dl=0" target="_blank" rel="noopener">Download (PDF)</a></p>
         <div class="sep"></div>
         <h2>Interests</h2>
-        <p class="muted">• Generative Ai • Web Developer • Data Analyst • Python Developer • Electronics 
+        <p class="muted">Generative AI • Web Development • Data Analytics • Python • Electronics</p>
       </aside>
     </div>
 
